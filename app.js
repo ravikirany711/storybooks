@@ -1,10 +1,14 @@
 const express=require('express')
 const mongoose=require('mongoose')
+const passport=require('passport')
 
 const app=express()
 
+//passport config
+require('./config/passport')(passport)
 
-//Load /auth/google route
+
+//Load /auth/google routes
 const auth=require('./routes/auth')
 
 
@@ -14,7 +18,7 @@ app.get('/',(req,res)=>{
     res.send('Home page')
 })
 
-//use routes
+//Use routes
 app.use('/auth',auth)
 
 const PORT=process.env.PORT||5000
