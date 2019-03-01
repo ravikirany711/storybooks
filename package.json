@@ -18,6 +18,8 @@
   "homepage": "https://github.com/ravikirany711/storybooks#readme",
   "dependencies": {
     "express": "^4.16.4",
-    "mongoose": "^5.4.16"
+    "mongoose": "^5.4.16",
+    "passport": "^0.4.0",
+    "passport-google-oauth": "^1.0.0"
   }
 }
